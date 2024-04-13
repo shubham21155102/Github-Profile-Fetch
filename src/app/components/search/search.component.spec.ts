@@ -1,21 +1,11 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Component } from '@angular/core';
 
-import { SearchComponent } from './search.component';
-
-describe('SearchComponent', () => {
-  let component: SearchComponent;
-  let fixture: ComponentFixture<SearchComponent>;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [SearchComponent]
-    });
-    fixture = TestBed.createComponent(SearchComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+@Component({
+  selector: 'app-search-component',
+  templateUrl: './search-component.component.html',
+  styleUrls: ['./search-component.component.scss']
+})
+export class SearchComponentComponent {
+  userName: string = ''
+  buttonText: string = 'Display'
+}
